@@ -1,0 +1,197 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[185]:
+
+import pandas as pd 
+
+
+# In[186]:
+
+
+data = pd.read_csv(r"E:\DataSet\Hackathon_training_data.csv",header = 0)
+data.head()
+
+
+# In[187]:
+
+
+len(data)
+
+
+# In[188]:
+
+
+data.company_location.unique()
+
+
+# In[189]:
+
+
+data.head()
+
+
+# In[190]:
+
+
+data.describe()
+
+
+# In[191]:
+
+
+data.isnull()
+
+
+# In[192]:
+
+
+data.sum()
+
+
+# In[193]:
+
+
+data.isna().sum()
+
+
+# In[194]:
+
+
+data = data.interpolate()
+data
+
+
+# In[195]:
+
+
+data.isna().sum()
+
+
+# In[196]:
+
+
+data['company_location'] = data['company_location'].astype('category')
+data['company_location'] = data['company_location'].cat.codes
+
+
+# In[197]:
+
+
+data
+
+
+# In[198]:
+
+
+
+data['country_of_bean_origin'] = data['country_of_bean_origin'].astype('category')
+data['country_of_bean_origin'] = data['country_of_bean_origin'].cat.codes
+
+
+data['sweet'] = data['sweet'].astype('category')
+data['sweet'] = data['sweet'].cat.codes
+
+
+data['nutty'] = data['nutty'].astype('category')
+data['nutty'] = data['nutty'].cat.codes
+
+
+data['cocoa'] = data['cocoa'].astype('category')
+data['cocoa'] = data['cocoa'].cat.codes
+
+
+data['roasty'] = data['roasty'].astype('category')
+data['roasty'] = data['roasty'].cat.codes
+
+
+data['earthy'] = data['earthy'].astype('category')
+data['earthy'] = data['earthy'].cat.codes
+
+
+data['creamy'] = data['creamy'].astype('category')
+data['creamy'] = data['creamy'].cat.codes
+
+data['sandy'] = data['sandy'].astype('category')
+data['sandy'] = data['sandy'].cat.codes
+
+data['fatty'] = data['fatty'].astype('category')
+data['fatty'] = data['fatty'].cat.codes
+
+data['floral'] = data['floral'].astype('category')
+data['floral'] = data['floral'].cat.codes
+
+data['intense'] = data['intense'].astype('category')
+data['intense'] = data['intense'].cat.codes
+
+data['spicy'] = data['spicy'].astype('category')
+data['spicy'] = data['spicy'].cat.codes
+
+data['sour'] = data['sour'].astype('category')
+data['sour'] = data['sour'].cat.codes
+
+data['vanilla'] = data['vanilla'].astype('category')
+data['vanilla'] = data['vanilla'].cat.codes
+
+data['fruit'] = data['fruit'].astype('category')
+data['fruit'] = data['fruit'].cat.codes
+
+data['molasses'] = data['molasses'].astype('category')
+data['molasses'] = data['molasses'].cat.codes
+
+data['woody'] = data['woody'].astype('category')
+data['woody'] = data['woody'].cat.codes
+
+data['sticky'] = data['sticky'].astype('category')
+data['sticky'] = data['sticky'].cat.codes
+
+data['coffee'] = data['coffee'].astype('category')
+data['coffee'] = data['coffee'].cat.codes
+
+data['rich'] = data['rich'].astype('category')
+data['rich'] = data['rich'].cat.codes
+
+data['dried.fruit'] = data['dried.fruit'].astype('category')
+data['dried.fruit'] = data['dried.fruit'].cat.codes
+
+data['ingredient_Beans'] = data['ingredient_Beans'].astype('category')
+data['ingredient_Beans'] = data['ingredient_Beans'].cat.codes
+
+data['ingredient_Sugar'] = data['ingredient_Sugar'].astype('category')
+data['ingredient_Sugar'] = data['ingredient_Sugar'].cat.codes
+
+data['ingredient_Sweetener'] = data['ingredient_Sweetener'].astype('category')
+data['ingredient_Sweetener'] = data['ingredient_Sweetener'].cat.codes
+
+data['ingredient_Cocoa_Butter'] = data['ingredient_Cocoa_Butter'].astype('category')
+data['ingredient_Cocoa_Butter'] = data['ingredient_Cocoa_Butter'].cat.codes
+
+data['ingredient_vanilla'] = data['ingredient_vanilla'].astype('category')
+data['ingredient_vanilla'] = data['ingredient_vanilla'].cat.codes
+
+data['ingredient_lecithin'] = data['ingredient_lecithin'].astype('category')
+data['ingredient_lecithin'] = data['ingredient_lecithin'].cat.codes
+
+data['ingredient_salt'] = data['ingredient_salt'].astype('category')
+data['ingredient_salt'] = data['ingredient_salt'].cat.codes
+
+
+# In[199]:
+
+
+data
+
+
+# In[200]:
+
+
+data
+
+
+# In[202]:
+
+
+data.dtypes
+
+
+# In[ ]:
